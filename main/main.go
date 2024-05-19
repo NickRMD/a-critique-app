@@ -18,7 +18,7 @@ func main() {
 	e := echo.New()
 
 	e.Use(middleware.CORSWithConfig(middleware.CORSConfig{
-		AllowOrigins: []string{"http://localhost:8000", "http://localhost:3000"},
+		AllowOrigins: []string{"http://localhost:10000", "http://localhost:3000"},
 		// AllowHeaders: []string{echo.HeaderOrigin, echo.HeaderContentType, echo.HeaderAccept},
 	}))
 
@@ -58,5 +58,5 @@ func main() {
 		return c.HTML(http.StatusNotFound, buf.String())
 	})
 
-	e.Logger.Fatal(e.Start(":3000"))
+	e.Logger.Fatal(e.Start(":10000"))
 }
