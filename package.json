@@ -8,7 +8,7 @@
     "dev:onlygo": "air",
     "dev": "concurrently \"webpack -w\" \"air\"",
     "install": "go install github.com/cosmtrek/air@latest && go install github.com/a-h/templ/cmd/templ@latest",
-    "deploy": "npm run install && npm run dev:onlygo"
+    "deploy": "air"
   },
   "dependencies": {
     "@alpinejs/morph": "^3.13.10",
